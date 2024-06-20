@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata ={
   metadataBase: new URL(`https://invite-cards.vercel.app/`),
-  title: "Invite Cards",
+  title: "Invite Cards: Celebrations and  wedding",
   description: "Invite Cards Description",
   keywords:"video invitation, wedding invitation video, create wedding invitation video,",
   alternates: {
