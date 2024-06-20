@@ -1,15 +1,10 @@
-"use client";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import Navigate from "../_components/Navigate";
+
 
 const page = () => {
-  const router = useRouter();
 
-  useEffect(() => {
-    router.push("/");
-  }, []);
 
-  return <div>page</div>;
+  return <div><Navigate/></div>;
 };
 
 export default page;
