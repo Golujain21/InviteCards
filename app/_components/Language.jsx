@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import Link from "next/link";
 import { LanguageData } from '../cards/_utils/utils';
-import Image from 'next/image';
 const LanguageClient = ({params}) => {
 
     const [currLanguage, setCurrLanguage] = useState(null);
@@ -48,7 +47,7 @@ const LanguageClient = ({params}) => {
                   gap: "10px",
                 }}
               >
-                <Image
+                <img
                   title={item}
                   loading="lazy"
                   width="216"
