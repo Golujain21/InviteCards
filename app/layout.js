@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata ={
-  metadataBase: new URL(`http://localhost:3000/`),
+  metadataBase: new URL(`https://invite-cards.vercel.app/`),
   title: "Invite Cards",
   description: "Invite Cards Description",
   keywords:"video invitation, wedding invitation video, create wedding invitation video,",
