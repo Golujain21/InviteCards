@@ -1,0 +1,367 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+/* @font-face{
+  font-family:"Magnolia-Script";
+  src:url('./assets/fontfamilies/magnoliafont.woff') format("woff"); 
+  font-weight:normal;font-style:normal;
+} */
+/* :root{
+--bg-image-hero-section:url('./assets/HeroBackground.jpg');
+} */
+
+body{
+/* overflow: hidden; */
+height: 100vh;
+}
+
+.canvas_blank {
+  padding: 0px !important;
+}
+
+/* .zoom_in_out {
+  transform: scale(1) !important;
+} */
+
+
+
+/* temaplets css */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+li {
+margin-left: 16px;
+}
+
+a {
+cursor: pointer;
+}
+
+.container-box {
+max-width: 991px;
+width: 100%;
+background: #fff;
+border-radius: 8px;
+overflow: hidden;
+}
+
+.file-input__input {
+width: 0.1px;
+height: 0.1px;
+opacity: 0;
+overflow: hidden;
+position: absolute;
+z-index: -1;
+}
+
+.file-input__label {
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+border-radius: 4px;
+font-size: 14px;
+font-weight: 600;
+color: #fff;
+font-size: 14px;
+padding: 10px 12px;
+background-color: #4245a8;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+.file-input__label svg {
+height: 16px;
+margin-right: 4px;
+}
+
+.toolbar {
+padding: 16px;
+background: #eee;
+}
+.toolbar .head {
+display: flex;
+grid-gap: 10px;
+margin-bottom: 16px;
+flex-wrap: wrap;
+}
+.toolbar .head > input {
+  max-width: 124px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 2px solid #ddd;
+  outline: none;
+}
+.toolbar .head select {
+background: #fff;
+border: 2px solid #ddd;
+border-radius: 6px;
+outline: none;
+cursor: pointer;
+}
+.toolbar .head .color {
+background: #fff;
+border: 2px solid #ddd;
+border-radius: 6px;
+outline: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+grid-gap: 6px;
+padding: 0 10px;
+}
+.toolbar .head .color span {
+font-size: 14px;
+}
+.toolbar .head .color input {
+border: none;
+padding: 0;
+width: 26px;
+height: 26px;
+background: #fff;
+cursor: pointer;
+}
+.toolbar .head .color input::-moz-color-swatch {
+width: 20px;
+height: 20px;
+border: none;
+border-radius: 50%;
+}
+.toolbar .btn-toolbar {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+grid-gap: 10px;
+}
+.toolbar .btn-toolbar button {
+background: #fff;
+border: 2px solid #ddd;
+border-radius: 6px;
+cursor: pointer;
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+}
+.toolbar .btn-toolbar button:hover {
+background: #f3f3f3;
+}
+#content {
+padding: 16px;
+outline: none;
+max-height: 50vh;
+overflow: auto;
+}
+#show-code[data-active="true"] {
+background: #eee;
+}
+
+@media (max-width: 768px) {
+.toolbar {
+  padding: 8px;
+  background: #eee;
+}
+.toolbar .head {
+grid-gap: 5px;
+margin-bottom: 5px;
+}
+.toolbar .btn-toolbar button {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+.canvas_blank {
+padding: 0px !important;
+}
+}
+
+.zoom {
+  bottom: 40px;
+  right: 200px;
+}
+
+.zoom-out {
+  bottom: 40px;
+  right: 150px;
+}
+.zoom-init {
+  bottom: 40px;
+  right:100px;
+}
+.canvas-container{
+max-width: 100%;
+}
+.canvas-container>canvas{
+/* max-width: 100%; */
+max-height: auto;
+}
+select {
+  /* word-wrap: normal; */
+  width: 57px;
+}
+@media screen and (max-width: 1024px){
+section.canvas_block {
+  padding: 20px 0px;
+  background: lavenderblush;
+}
+.canvas_blank{
+  padding: 0 !important;
+}
+}
+@media screen and (max-width: 576px) {
+section.canvas_block {
+      padding: 10px 0px;
+      background: lavenderblush;
+}
+input#imageLoader {
+    width: 99px;
+}
+
+.all-selecter {
+  display: flex;
+  flex-wrap: wrap;
+}
+.zoom_in_out {
+  transform: scale(1) !important;
+}
+.canvas-container>canvas{
+max-width: 100%;
+max-height: 80vh;
+}
+}
+/* @media (min-height: 823) {
+.canvas-container>canvas{
+  max-width: 100%;
+  max-height: 80vh;
+  }
+} */
+
+#tooltip {
+  position: absolute;
+  top: -66px;
+  margin-top: 5px;
+  width: 80px;
+  background-color: #ffffff;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  border: 1px solid #000000;
+}
+.all-selecter {
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#lowQuality{
+width: 150px;
+}
+
+#highQuality{
+width: 150px;
+}
+
+.main-content {
+  margin: 3em auto 0;
+}
+.main-content-inner {
+  width: 100%;
+}
+canvas {
+  border: 2px solid gray;
+  float: right;
+}
+.canvas-container {
+  width: 70%;
+  float: right;
+}
+#textAreaContainer {
+  width: 25%;
+  float: left;
+  margin-right: 10px;
+}
+#myTextArea {
+  height: 200px;
+  font-size: 12px;
+}
+.btn-container {
+  margin: 0.5em 0;
+}
+
+section.canvas_block {
+  padding: 30px 0px;
+  background: lavenderblush;
+}
+
+
+
+
+
+/* ----------------------Footer------------------------- */
+.all_buttons-section {
+  position: relative;
+}
+.all_buttons-section a, .paragraph-section p {
+  text-decoration: none;
+  color: #696b79;
+  font-size: 13px;
+  line-height: 25px;
+  font-family: 'CERAPRO-REGULAR';
+  list-style: none;
+}
+.all_buttons-section .container>a:after {
+content: "|";
+margin-left: 3px;
+}
+.all_buttons-section .container>a:last-child:after {
+content: "";
+}
+
+/* =============ALL-SECTIONS=================== */
+.hero_section {
+background: var(--bg-image-hero-section);
+padding: 0 0 125px;
+}
+.hero_section {
+background-size: cover !important;
+background-position: center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed !important;
+}
