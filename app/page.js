@@ -1,7 +1,9 @@
 import MainLayout from "./_components/MainLayout";
+import { metadata } from "./layout";
 
 
 export default function Home() {
+  metadata.title= "Invite Cards: Celebrations and  wedding"
   return (
     <>
    
