@@ -22,8 +22,6 @@ const Category = ({ params }) => {
   };
 
   const currLanguage = getSubCategory(language, SubCategories, category);
-
-  console.log();
   metadata.title=`${params.language} ${params.category}`,
   metadata.description=`description from Category Page ${params.language} ${params.category}`
 
