@@ -41,7 +41,7 @@ const Language = ({ params }) => {
                           style={{ width: "100%" }}
                         />
                         <Link
-                          href={`/${params.language}/${item.replace(" ", "")}`}
+                          href={`/cards/${params.language}/${item.replace(" ", "")}`}
                           style={{ padding: "20px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px", borderRadius: "10px", cursor: "pointer" }}
                         >
                           {item}
