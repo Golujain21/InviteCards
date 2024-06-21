@@ -1,16 +1,31 @@
-
 import React from "react";
 
 import MainLayout from "@/app/_components/MainLayout";
 
 import CategoryClient from "@/app/_components/CategoryClient";
-// import { metadata } from "@/app/layout";
+import { SubCategories, Products } from "../../_utils/utils";
+import { metadata } from "@/app/layout";
 const Category = ({ params }) => {
+  const { language, category } = params;
 
-  
-// metadata.title=`${params.language} ${params.category}`,
-// metadata.description="description from Category Page"
+  const getSubCategory = (language, SubCategories, category) => {
+    if (language && category) {
+      for (let key in SubCategories) {
+        if (key == `${language}-${category}`) {
+          let value = SubCategories[key];
+          return { "sub-category": value };
+        } else {
+          return { product: Products };
+        }
+      }
+    }
+  };
 
+  const currLanguage = getSubCategory(language, SubCategories, category);
+
+  console.log();
+  metadata.title=`${params.language} ${params.category}`,
+  metadata.description=`description from Category Page ${params.language} ${params.category}`
 
   return (
     <MainLayout>
@@ -23,8 +38,11 @@ const Category = ({ params }) => {
           justifyContent: "center",
         }}
       >
-        <CategoryClient params={params}/>
-      
+        <CategoryClient
+          SubCategories={currLanguage["sub-category"]}
+          Products={currLanguage.product}
+          params={params}
+        />
       </div>
     </MainLayout>
   );
