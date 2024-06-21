@@ -6,9 +6,9 @@ import Footer from "./Footer";
 const MainLayout = ({ children }) => {
   return (
     <div  style={{display:"flex",flexDirection:"column",height:"100vh",}}>
-      <div><Header/></div>
+      <header><Header/></header>
       <div style={{flex:1 }}>{children}</div>
-      <div><Footer/> </div>
+      <footer><Footer/></footer>
     </div>
   );
 };
